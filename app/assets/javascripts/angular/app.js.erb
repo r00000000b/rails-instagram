@@ -1,0 +1,13 @@
+'use strict'; // Make sure you don't have syntax errors
+
+// var app = angular.module('appName', ['oneDependency']);
+var app = angular.module('rails-instagram', ['ngRoute']);
+
+app.config(['$routeProvider', function($routeProvider) {
+  // Configure Angular Routes
+  $routeProvider.
+    when('/', {
+      templateUrl: "<%= asset_path('static_pages/index.html') %>",
+      controller: 'StaticPagesCtrl'
+    })
+}]);
